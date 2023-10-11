@@ -2,6 +2,8 @@ version: '3'
 
 services:
   nginx:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: nginx:1.15-alpine
     restart: unless-stopped
     volumes:
